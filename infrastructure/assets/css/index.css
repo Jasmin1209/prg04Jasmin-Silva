@@ -1,0 +1,67 @@
+header{
+    background-color: #757EF0;
+    padding: 30px;
+    width: 100%;
+}
+
+body{
+    background-color: #80819c;
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.0em;
+    padding: 10px autp;
+    color: #c7cff7;
+    border: 1px solid wheat;
+}
+
+#menu{
+    padding: 20px;
+    text-align: center;
+    background-color: #494e7a;
+}
+
+#menu a{
+    display: block; /* Faz o link ficat em blocos*/
+    color: #c7cff7;
+    text-decoration: none;
+    border: 1px solid wheat;
+    background-color: #111325;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#menu a:hover{
+    background-color: #c7cff7;
+    color: #111325;
+    padding: 12px;
+}
+
+ul {
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex; /*Coloca os itens/blocos lado a lado */
+    justify-content: center; /* centraliza */
+    flex-wrap: wrap; /* Permite quebrar linha no celular */
+    gap: 10px; /* espaço entre os botões */
+}
+
+li {
+    display: block;
+}
+
+img{
+    max-width: 100%; /* Nunca ultrapassa a tela */
+    height: auto; /*mantém proporções*/
+}
+
+   

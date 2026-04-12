@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    height: 100vh; /* altura total da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #111325;
+}
+
+/* container vira opcional */
+#container {
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #494e7a;
+    background-color: #1f234e;
+}
+
+/* card centralizado naturalmente */
+#card {
+    margin: 0 auto;
+    border: 5px solid #494e7a;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #1c1f3a;
+    color: #c7cff7;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* título */
+h1 {
+    text-align: center;
+    color: #c7cff7;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+/* labels */
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* inputs */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin: 0;
+}
+
+/* botão */
+input[type="submit"] {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #757EF0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #5a63d8;
+}
+
+input:invalid {
+    border: 2px solid #b42525;
+}
+
+input:valid {
+    border: 2px solid #757EF0;
+}

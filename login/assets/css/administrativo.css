@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111325;
+    color: #c7cff7;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    background-color: #1f234e;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #757EF0;
+}
+
+tr:nth-child(even) {
+    background-color: #3b3f63;
+}
+
+button {
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* hierarquia visual */
+.editar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.excluir {
+    background-color: #ff4d4d;
+    color: white;
+    margin-left: 5px;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}

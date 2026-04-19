@@ -4,108 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/administrativo.css">
 </head>
 <body>
-    <form action="/infrastructure/pages/index.html">
-        <button>
-            Voltar para o Inicio
-        </button>
-    </form>
-    <h1>Painel Administrativo</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
+    <div class="container py-4 ">
+    <!-- container: centraliza o conteúdo e limita a largura da página
+         py-4: adiciona padding em cima e embaixo (padding vertical) -->
+        <div class="row mb-4 align-items-center">
+        <!-- row: cria uma linha do grid do Bootstrap
+             mb-4: adiciona margem embaixo
+             align-items-center: centraliza os itens verticalmente -->
+            <div class="col-12 col-md-8">
+            <!-- col-12: em telas pequenas ocupa 100% da largura
+                 col-md-8: em telas médias/grandes ocupa 8 colunas do grid (aprox. 66%) -->
+                <h1 class="m-0">Painel Administrativo</h1>
+                <!-- m-0: remove margens do título -->
+            </div>
 
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Maria Silva</td>
-                <td>maria@email.com</td>
-                <td>
-                    <button class="editar">
-                        <img src="/login/assets/img/update.png" alt="">
-                        Editar
+            <div class="col-12 col-md-4 text-md-end mt-2 mt-md-0">
+            <!-- col-12: no celular ocupa toda a linha
+                 col-md-4: no desktop ocupa 4 colunas (aprox. 33%)
+                 text-md-end: no desktop o texto fica alinhado à direita
+                 mt-2: no celular adiciona margem superior
+                 mt-md-0: no desktop remove a margem superior -->
+                <form action="/infrastructure/pages/index.html">
+                    <button type="submit" class="btn btn-outline-light w-100">
+                    <!--btn-outline-light: botão com borda branca e fundo transparente
+                        w-100: faz o botão ocupar 100% da largura -->
+                        Voltar para o Inicio
                     </button>
-                    <button class="excluir">
-                        <img src="/login/assets/img/delete-icon.png" alt="">
-                        Excluir
-                    </button>
-                </td>
-            </tr>
+                </form>
+            </div>
+        </div>
 
-            <tr>
-                <td>2</td>
-                <td>João Souza</td>
-                <td>joao@email.com</td>
-                <td>
-                    <button class="editar">
-                        <img src="/login/assets/img/update.png" alt="">
-                        Editar
-                    </button>
-                    <button class="excluir">
-                        <img src="/login/assets/img/delete-icon.png" alt="">
-                        Excluir
-                    </button>
-                </td>
-            </tr>
+        <div class="card shadow-sm admin-card">
+        <!-- card: cria um cartão Bootstrap
+             shadow-sm: coloca uma sombra pequena
+             admin-card: classe personalizada (CSS) -->
+            <div class="card-body">
+            <!-- card-body: área interna do card -->
+                <h5 class="card-title mb-3">Lista de Usuários</h5>
+                <!-- card-title: estilo padrão para título do card
+                     mb-3: margem inferior -->
+                <div class="table-responsive">
+                <!-- table-responsive: permite rolagem horizontal no celular. Isso faz a tabela caber na tela pequena -->
+                    <table class="table table-striped table-hover table-bordered align-middle text-center">
+                    <!-- table: aplica estilo padrão Bootstrap na tabela
+                         table-striped: cria linhas alternadas (zebra)
+                         table-hover: muda a cor da linha quando passa o mouse
+                         table-bordered: adiciona bordas na tabela
+                         align-middle: centraliza verticalmente o conteúdo das células-->
+                        <thead>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Ações</th>
+                        </thead>
 
-            <tr>
-                <td>3</td>
-                <td>Ana Costa</td>
-                <td>ana@email.com</td>
-                <td>
-                    <button class="editar">
-                        <img src="/login/assets/img/update.png" alt="">
-                        Editar
-                    </button>
-                    <button class="excluir">
-                        <img src="/login/assets/img/delete-icon.png" alt="">
-                        Excluir
-                    </button>
-                </td>
-            </tr>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Maria Silva</td>
+                                <td>maria@email.com</td>
+                                <td>
+                                    <!-- flex-column: no celular os botões ficam um embaixo do outro
+                                         flex-md-row: no desktop os botões ficam lado a lado
+                                         justify-content-center: centraliza os botões-->
+                                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                        <button class="btn btn-success btn-sm me-2">
+                                            <img src="/login/assets/img/update.png" alt="" class="icon">
+                                            Editar
+                                        </button>
+                                        <button class="btn btn-danger btn-sm">
+                                            <img src="/login/assets/img/delete-icon.png" alt="" class="icon">
+                                            Excluir
+                                        </button>
+                                    </div>
+                                    <!-- btn: estilo de botão Bootstrap
+                                         btn-success: botão verde
+                                         btn-sm: botão pequeno
+                                         btn-danger: botão vermelho
+                                         me-2: margem à direita (margin-end) -->
+                                </td>
+                            </tr>
 
-            <tr>
-                <td>4</td>
-                <td>Carlos Lima</td>
-                <td>carlos@email.com</td>
-                <td>
-                    <button class="editar">
-                        <img src="/login/assets/img/update.png" alt="">
-                        Editar
-                    </button>
-                    <button class="excluir">
-                        <img src="/login/assets/img/delete-icon.png" alt="">
-                        Excluir
-                    </button>
-                </td>
-            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>João Souza</td>
+                                <td>joao@email.com</td>
+                                <td>
+                                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                        <button class="btn btn-success btn-sm me-2">
+                                            <img src="/login/assets/img/update.png" alt="" class="icon">
+                                            Editar
+                                        </button>
+                                        <button class="btn btn-danger btn-sm">
+                                            <img src="/login/assets/img/delete-icon.png" alt="" class="icon">
+                                            Excluir
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
 
-            <tr>
-                <td>5</td>
-                <td>Fernanda Alves</td>
-                <td>fernanda@email.com</td>
-                <td>
-                    <button class="editar">
-                        <img src="/login/assets/img/update.png" alt="">
-                        Editar
-                    </button>
-                    <button class="excluir">
-                        <img src="/login/assets/img/delete-icon.png" alt="">
-                        Excluir
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                            <tr>
+                                <td>3</td>
+                                <td>Ana Costa</td>
+                                <td>ana@email.com</td>
+                                <td>
+                                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                        <button class="btn btn-success btn-sm me-2">
+                                            <img src="/login/assets/img/update.png" alt="" class="icon">
+                                            Editar
+                                        </button>
+                                        <button class="btn btn-danger btn-sm">
+                                            <img src="/login/assets/img/delete-icon.png" alt="" class="icon">
+                                            Excluir
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
 
+                            <tr>
+                                <td>4</td>
+                                <td>Carlos Lima</td>
+                                <td>carlos@email.com</td>
+                                <td>
+                                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                        <button class="btn btn-success btn-sm me-2">
+                                            <img src="/login/assets/img/update.png" alt="" class="icon">
+                                            Editar
+                                        </button>
+                                        <button class="btn btn-danger btn-sm">
+                                            <img src="/login/assets/img/delete-icon.png" alt="" class="icon">
+                                            Excluir
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>Fernanda Alves</td>
+                                <td>fernanda@email.com</td>
+                                <td>
+                                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                        <button class="btn btn-success btn-sm me-2">
+                                            <img src="/login/assets/img/update.png" alt="" class="icon">
+                                            Editar
+                                        </button>
+                                        <button class="btn btn-danger btn-sm">
+                                            <img src="/login/assets/img/delete-icon.png" alt="" class="icon">
+                                            Excluir
+                                        </button>
+                                    </div>
+                                </td>
+                            
+                            </tr>
+                        
+                        </tbody>
+
+                    </table>
+                
+                </div>
+            
+            </div>
+        
+        </div>
+    
+    </div>
 </body>
 </html>

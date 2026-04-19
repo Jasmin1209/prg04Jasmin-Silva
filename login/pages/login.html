@@ -1,26 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/login/assets/css/login.css">
 </head>
 <body>
     
-    <div id="container">
-        <h1>LOGIN</h1>
-
-        <div id="card">
-            <form action="/login/pages/administrativo.html" method="">
-                <label id="usuario" for="username">Usuário:</label>
-                <input type="email" id="username" name="username" placeholder="Seu email"  required><br><br>
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" placeholder="Sua senha" required><br><br>
-                <input type="submit" value="Login">
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+    <!-- container: centraliza o conteúdo e cria margens laterais automáticas
+         min-vh-100: define altura mínima como 100% da tela (viewport height)
+         d-flex: transforma o container em flexbox (permite alinhamento fácil)
+         justify-content-center: centraliza horizontalmente
+         align-items-center: centraliza verticalmente -->    
+        <div class="card login-card p-4">
+        <!-- card: componente pronto do Bootstrap (um cartão)
+             login-card: classe personalizada (CSS)
+             p-4: adiciona espaçamento interno (padding) -->
+            <h1 class="text-center mb-4">LOGIN</h1>
+            <!-- text-center: centraliza o texto
+                 mb-4: margem embaixo (margin-bottom) -->
+            <form action="/login/pages/administrativo.html">
+                <div class="mb-3">
+                <!-- mb-3: cria um espaço embaixo do campo (margin-bottom) -->
+                    <label for="username" class="form-label">Usuário:</label>
+                    <input type="email" class="form-control" name="username" placeholder="Seu email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha:</label>
+                    <input type="password" class="form-control" name="password" placeholder="Sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                <!-- w-100: largura 100% (botão ocupa toda a largura do card) -->
+                    Login
+                </button>
             </form>
         </div>
-        
     </div>
 </body>
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova Denúncia</title>
+
+    <link rel="stylesheet" href="/denuncia/assets/css/denuncia.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <div class="denuncia-card">
+
+            <h1>Registrar Denúncia</h1>
+
+            <form id="formDenuncia">
+
+                <div class="input-group">
+                    <label>Título</label>
+
+                    <input 
+                        type="text"
+                        id="titulo"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Categoria</label>
+
+                    <select id="categoria">
+
+                        <option>Fake News</option>
+
+                        <option>Corrupção</option>
+
+                        <option>Violência</option>
+
+                        <option>Golpe</option>
+
+                        <option>Outros</option>
+
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Descrição</label>
+
+                    <textarea 
+                        id="descricao"
+                        rows="8"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>Local da ocorrência</label>
+
+                    <input 
+                        type="text"
+                        id="local"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Evidência</label>
+
+                    <input 
+                        type="file"
+                        id="imagem"
+                    >
+                </div>
+
+                <div class="checkbox-group">
+
+                    <input 
+                        type="checkbox"
+                        id="anonima"
+                    >
+
+                    <label for="anonima">
+                        Desejo permanecer anônimo
+                    </label>
+
+                </div>
+
+                <button type="submit">
+                    Enviar denúncia
+                </button>
+
+            </form>
+
+            <div id="mensagem"></div>
+
+        </div>
+
+    </main>
+
+    <script src="../assets/js/denuncia.js"></script>
+
+</body>
+</html>

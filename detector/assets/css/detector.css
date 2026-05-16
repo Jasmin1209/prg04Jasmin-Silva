@@ -1,0 +1,34 @@
+.fake-news-box{
+    background: #1c1f3a;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.fake-news-box textarea{
+    width: 100%;
+    height: 180px;
+    background: #2a2e5e;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    resize: none;
+}
+
+.fake-news-box button{
+    margin-top: 15px;
+    width: 100%;
+}
+
+.fake{
+    color: #ff5c5c;
+}
+
+.warning{
+    color: #ffd166;
+}
+
+.real{
+    color: #80ed99;
+}
